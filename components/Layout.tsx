@@ -1,6 +1,12 @@
 import Link from 'next/link';
-import {Header, Navbar, Logo, NavList, Navlink} from './styled-components/Header';
-import {GenericLink, PostSection} from './styled-components/Main';
+import {
+  Header,
+  Navbar,
+  Logo,
+  NavList,
+  Navlink,
+} from './styled-components/Header';
+import { GenericLink, PostSection } from './styled-components/Main';
 
 export default function Layout({
   children,

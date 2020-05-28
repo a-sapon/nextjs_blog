@@ -10,11 +10,13 @@ import {
 } from './styled-components/Main';
 
 export default function NewComment({
-  onWriteNewComment, onToggleComments, addComment
+  onWriteNewComment,
+  onToggleComments,
+  addComment,
 }: {
   onWriteNewComment: () => void;
   onToggleComments: () => void;
-  addComment: (comment: {postId: number, body: string}) => void;
+  addComment: (comment: { id: number; body: string }) => void;
 }) {
   const [body, setBody] = useState('');
   const router = useRouter();
@@ -37,7 +39,9 @@ export default function NewComment({
       } catch (err) {
         console.log(err);
       }
-      addComment(comment);
+
+      const commentForUi = { id: Number(router.query.id), body };
+      addComment(commentForUi);
       onWriteNewComment();
       onToggleComments();
     }

@@ -1,7 +1,11 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
-import {Title, PostsListItem, GenericLink} from '../components/styled-components/Main';
+import {
+  Title,
+  PostsListItem,
+  GenericLink,
+} from '../components/styled-components/Main';
 import { GetServerSideProps } from 'next';
 import axios from 'axios';
 
